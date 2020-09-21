@@ -1,0 +1,26 @@
+.searchbar{
+    text-align: center;
+    margin-top: 10px;
+}
+.searchmovies{
+    width: 575px;
+    height: 125%;
+    border: 3px solid orange; 
+}
+.search_buttons{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.search_buttons .movie_submit{
+    background-color: yellow;
+    color: black
+}
+.search_buttons .tv_submit{
+    background-color:yellow;
+    color: black;
+}
+.search_buttons .back_menu{
+    background-color: yellow;
+    color: black;
+}

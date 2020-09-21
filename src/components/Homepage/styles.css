@@ -1,0 +1,26 @@
+.background{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    max-height: 100%;
+}
+.Posters{
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+.MovieName{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+}
+.MovieTitle{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+}
+.trending{
+    background-size: cover;
+}

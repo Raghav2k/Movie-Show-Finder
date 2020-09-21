@@ -1,0 +1,59 @@
+.detail_background{
+    background-color: black;
+}
+.movie_title{
+    text-align: center;
+    color: white;
+}
+.detail_page{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 75px;
+    display: block;
+    font: large;
+    color: white;
+}
+.trailer{
+    display: inline-block !important;
+    max-width: 50% !important;
+    margin: 25px 10px;
+}
+.movie_details{
+    margin-top: 50px;
+    text-align: center;
+    font-size: large;
+    color: white;
+}
+.tv_details{
+    margin-top: 50px;
+    text-align: center;
+    font-size: large;
+    color: white;
+}
+.genres{
+    margin-left: 180px;
+    margin-top: 25px;
+    font-size: large;
+    color: white;
+}
+.overview{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: large;
+    color: white;
+}
+.cast{
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.names{
+    margin: 5px;
+    font-size: large;
+    color: white;
+}
+.cast_pics{
+    margin: 5px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
