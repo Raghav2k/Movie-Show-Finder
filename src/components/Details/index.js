@@ -1,6 +1,7 @@
 import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import key from '../../Key'
 import './styles.css'
 import ReactPlayer from "react-player"
 
@@ -22,12 +23,12 @@ class Details extends React.Component{
         let url = ''
         let cast_url = ''
         if(this.props.location.aboutProps.type || this.props.location.aboutProps.latest_type === 'movie'){
-            url = 'https://api.themoviedb.org/3/movie/'.concat(this.props.location.aboutProps.id).concat('?api_key=4f02959b89ceb660d5b1018f517488de&language=en-US&append_to_response=videos');
-            cast_url = 'https://api.themoviedb.org/3/movie/'.concat(this.props.location.aboutProps.id).concat('/credits?api_key=4f02959b89ceb660d5b1018f517488de');
+            url = 'https://api.themoviedb.org/3/movie/'.concat(this.props.location.aboutProps.id).concat('?api_key=').concat(key).concat('&language=en-US&append_to_response=videos');
+            cast_url = 'https://api.themoviedb.org/3/movie/'.concat(this.props.location.aboutProps.id).concat('/credits?api_key='.concat(key));
         }
         else{
-            url = 'https://api.themoviedb.org/3/tv/'.concat(this.props.location.aboutProps.id).concat('?api_key=4f02959b89ceb660d5b1018f517488de&language=en-US&append_to_response=videos');
-            cast_url = 'https://api.themoviedb.org/3/tv/'.concat(this.props.location.aboutProps.id).concat('/credits?api_key=4f02959b89ceb660d5b1018f517488de');
+            url = 'https://api.themoviedb.org/3/tv/'.concat(this.props.location.aboutProps.id).concat('?api_key=').concat(key).concat('&language=en-US&append_to_response=videos');
+            cast_url = 'https://api.themoviedb.org/3/tv/'.concat(this.props.location.aboutProps.id).concat('/credits?api_key='.concat(key));
         }
         const response = await fetch(url);
         const data = await response.json();

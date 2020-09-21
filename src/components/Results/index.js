@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import {Link} from 'react-router-dom'
+import key from '../../Key'
 import './styles.css'
 
 
@@ -33,11 +34,11 @@ class Results extends React.Component{
             this.setState({display:true})
             let url = ''
             if(this.props.is_query_movie){
-                url = 'https://api.themoviedb.org/3/search/movie?api_key=4f02959b89ceb660d5b1018f517488de&query='.concat(this.props.query).concat('&page=').concat(this.state.current_page);
+                url = 'https://api.themoviedb.org/3/search/movie?api_key='.concat(key).concat('&query=').concat(this.props.query).concat('&page=').concat(this.state.current_page);
                 
             }
             else{
-                url = 'https://api.themoviedb.org/3/search/tv?api_key=4f02959b89ceb660d5b1018f517488de&language=en-US&page=1&query='.concat(this.props.query).concat('&include_adult=false&page=').concat(this.state.current_page)
+                url = 'https://api.themoviedb.org/3/search/tv?api_key='.concat(key).concat('&language=en-US&page=1&query=').concat(this.props.query).concat('&include_adult=false&page=').concat(this.state.current_page)
             }
             const response = await fetch (url);
             const data = await response.json();

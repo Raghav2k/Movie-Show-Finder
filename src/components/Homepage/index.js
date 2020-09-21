@@ -2,6 +2,7 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import key from '../../Key'
 import Details from '../Details'
 import {Link} from 'react-router-dom'
 import './styles.css'
@@ -18,7 +19,7 @@ class Home extends React.Component{
         }
     }
     async componentDidMount(){
-        const url = "https://api.themoviedb.org/3/trending/all/day?api_key=4f02959b89ceb660d5b1018f517488de";
+        const url = "https://api.themoviedb.org/3/trending/all/day?api_key=".concat(key);
         const response = await fetch(url);
         const data = await response.json();
         this.setState({movies: data.results, loading:false});
